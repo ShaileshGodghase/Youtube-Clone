@@ -1,4 +1,6 @@
+@use "../../globals" as globals;
+
 .home-wrapper {
-  background-color: royalblue;
+  background-color: globals.$primary-background;
   height: 100%;
 }
