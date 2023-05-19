@@ -1,6 +1,12 @@
 $primary-background: #0f0f0f;
 $secondary-background: #272727;
 $primary-font-color: #f1f1f1;
-$secondary-font-color: #AAAAAA;
+$secondary-font-color: #aaaaaa;
 $brand-color: #ff0000;
-$accent-color: #3EA6FF;
+$accent-color: #3ea6ff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

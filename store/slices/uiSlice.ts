@@ -1,22 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export interface uiState{
-    isLoading: boolean;
+export interface uiState {
+  isLoading: boolean;
+  isSidebarOpen: boolean;
 }
 
 const initialState: uiState = {
-    isLoading: false,
- };
+  isLoading: false,
+  isSidebarOpen: false,
+};
 
 export const uiSlice = createSlice({
-    name: "ui",
-    initialState,
-    reducers: {
-        toggleLoading: (state) => {
-            state.isLoading = !state.isLoading;
-        }
-    }
+  name: "ui",
+  initialState,
+  reducers: {
+    toggleLoading: (state) => {
+      state.isLoading = !state.isLoading;
+    },
+    toggleSidebar: (state) => {
+      state.isSidebarOpen = !state.isSidebarOpen;
+    },
+  },
 });
 
-export const { toggleLoading } = uiSlice.actions;
+export const { toggleLoading, toggleSidebar } = uiSlice.actions;
 export default uiSlice.reducer;

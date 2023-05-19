@@ -1,0 +1,16 @@
+.sidebar-wrapper {
+  height: 100vh;
+  background-color: yellow;
+}
+
+@media (max-width: 768px) {
+  .sidebar-wrapper {
+    position: absolute;
+    left: -100%;
+  }
+  .active {
+    transition: all 0.3s ease;
+    left: 0;
+    z-index: 1;
+  }
+}

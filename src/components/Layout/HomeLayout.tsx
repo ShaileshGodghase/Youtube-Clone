@@ -1,14 +1,17 @@
 import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
 import Sidebar from "../Sidebar/Sidebar";
+import "./HomeLayout.scss";
 
 export default function HomeLayout() {
   return (
     <>
-      <section>
-        <Header />
+      <section className="layout-wrapper">
         <Sidebar />
-        <Outlet />
+        <section className="content-wrapper">
+          <Header />
+          <Outlet />
+        </section>
       </section>
     </>
   );
