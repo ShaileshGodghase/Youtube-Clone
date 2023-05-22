@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
 import Sidebar from "../Sidebar/Sidebar";
 import "./HomeLayout.scss";
+import Tablist from "../TablistComp/Tablist";
 
 export default function HomeLayout() {
   return (
@@ -10,6 +11,7 @@ export default function HomeLayout() {
         <Sidebar />
         <section className="content-wrapper">
           <Header />
+          <Tablist />
           <Outlet />
         </section>
       </section>

@@ -1,0 +1,17 @@
+@use "../../../globals" as global;
+
+.tab-card-wrapper {
+  display: inline-block;
+  background-color: global.$secondary-background;
+  color: global.$primary-font-color;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.tab-card-wrapper:hover {
+  color: global.$primary-background;
+  background-color: global.$secondary-font-color;
+}

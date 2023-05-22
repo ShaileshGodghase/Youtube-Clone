@@ -1,0 +1,15 @@
+@use "../../globals" as global;
+
+.tab-list-section {
+  //   display: flex;
+  margin: 0 auto;
+  background-color: global.$primary-background;
+  //   flex-direction: row;
+  //   justify-content: space-evenly;
+  padding: 10px 0;
+  overflow: auto;
+  white-space: nowrap;
+}
+.tab-list-section::-webkit-scrollbar {
+  display: none;
+}
