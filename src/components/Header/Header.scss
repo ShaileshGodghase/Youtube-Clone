@@ -9,7 +9,9 @@
   border-bottom: 1px solid global.$secondary-font-color;
 }
 .header-logo {
-  display: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .header-logo svg {
   width: 30%;
@@ -61,25 +63,21 @@
   font-size: 25px;
   margin-right: 8px;
 }
+.menu-btn {
+  color: global.$primary-font-color;
+  font-weight: 500;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media (max-width: 912px) {
   .header-wrapper {
     padding: 25px 10px;
   }
-  .header-logo {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
+
   .search-wrapper {
     display: none;
-  }
-  .menu-btn {
-    color: global.$primary-font-color;
-    font-weight: 500;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }

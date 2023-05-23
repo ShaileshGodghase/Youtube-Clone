@@ -2,5 +2,8 @@
 
 .home-wrapper {
   background-color: globals.$primary-background;
-  height: 100%;
+  height: 100vh;
+  padding: 8px;
+  overflow-y: scroll;
+  padding-bottom: 200px;
 }

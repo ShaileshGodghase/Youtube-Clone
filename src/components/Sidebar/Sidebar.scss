@@ -4,6 +4,9 @@
   height: 100vh;
   background-color: global.$primary-background;
   width: 20%;
+  position: absolute;
+  left: -100%;
+  transition: all 0.3s ease;
 }
 .logo-wrapper {
   position: relative;
@@ -56,17 +59,11 @@
 .close {
   display: none;
 }
+.active {
+  left: 0;
+  z-index: 1;
+}
 @media (max-width: 912px) {
-  .sidebar-wrapper {
-    position: absolute;
-    left: -100%;
-    width: 50%;
-    transition: all 0.3s ease;
-  }
-  .active {
-    left: 0;
-    z-index: 1;
-  }
   .close {
     display: block;
     position: absolute;
@@ -78,6 +75,6 @@
 }
 @media (max-width: 540px) {
   .sidebar-wrapper {
-    width: 90%;
+    width: 60%;
   }
 }
