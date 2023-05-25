@@ -3,23 +3,25 @@ import VideoGrid from "../VideoComp/VideoGrid/VideoGrid";
 import { useQuery } from "react-query";
 import { CreateApiEndpoint } from "../Fetch/CreatAPIEndpoint";
 import type { VideoType } from "../VideoComp/CommonTypes";
-import "./Home.scss";
+import "../Home/Home.scss";
+import { useParams } from "react-router-dom";
 
-const fetchVideos = CreateApiEndpoint("search", {
-  q: "new",
-  part: "snippet,id",
-  regionCode: "IN",
-  maxResults: 50,
-  order: "date",
-});
+function Category() {
+  const { categoryId } = useParams();
+  const fetchVideos = CreateApiEndpoint("search", {
+    q: categoryId,
+    part: "snippet,id",
+    regionCode: "IN",
+    maxResults: 50,
+    order: "date",
+  });
 
-function Home() {
-  const { isLoading, data, isError } = useQuery("home", fetchVideos);
+  let queryName: string = categoryId!;
+  const { isLoading, data, isError } = useQuery(queryName, fetchVideos);
 
   if (isLoading) return <div>Loading...</div>;
 
   if (isError) return <div>Something Went Wrong</div>;
-  // console.log(data);
 
   return (
     <div className="home-wrapper">
@@ -32,4 +34,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Category;

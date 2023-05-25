@@ -1,5 +1,8 @@
 @use "../../../globals" as global;
 
+.video-card {
+  text-decoration: none;
+}
 .thumbnail {
   width: 100%;
   border-radius: 5%;

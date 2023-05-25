@@ -1,14 +1,22 @@
 import "./Sidebar.scss";
 import type { CategoryLinkProps } from "./CategoryList";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { closeSidebar } from "../../../store/slices/uiSlice";
 
 function CategoryLink({ Icon, label }: CategoryLinkProps) {
+  const dispatch = useDispatch();
   return (
-    <div className="category-link-wrapper">
-      <a className="category-link" href="/trending">
+    <Link
+      className="category-link-wrapper"
+      to={"/category/" + label}
+      onClick={() => dispatch(closeSidebar())}
+    >
+      <div className="category-link">
         <Icon />
         {label}
-      </a>
-    </div>
+      </div>
+    </Link>
   );
 }
 

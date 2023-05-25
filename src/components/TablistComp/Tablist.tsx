@@ -7,7 +7,7 @@ function Tablist() {
     <>
       <section className="tab-list-section">
         {TabList.map((tab) => {
-          return <Tabcard label={tab.label} />;
+          return <Tabcard key={tab.label} label={tab.label} />;
         })}
       </section>
     </>

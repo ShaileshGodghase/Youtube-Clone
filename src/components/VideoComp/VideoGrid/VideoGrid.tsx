@@ -1,20 +1,12 @@
-import VideoCard from "../VideoCard/VideoCard";
 import "./VideoGrid.scss";
 
-function VideoGrid() {
+type VideoGridProps = {
+  children: string | JSX.Element | JSX.Element[];
+};
+function VideoGrid({ children }: VideoGridProps) {
   return (
     <>
-      <section className="video-grid-section">
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-      </section>
+      <section className="video-grid-section">{children}</section>
     </>
   );
 }

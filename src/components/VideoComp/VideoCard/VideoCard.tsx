@@ -1,15 +1,28 @@
 import "./VideoCard.scss";
 import { BsDot } from "react-icons/bs";
+import { VideoType } from "../CommonTypes";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { closeSidebar } from "../../../../store/slices/uiSlice";
 
-function VideoCard() {
+interface VideoCardType {
+  videoInfo: VideoType;
+}
+function VideoCard({ videoInfo }: VideoCardType) {
+  const { channelTitle, title, thumbnails } = videoInfo.snippet;
+  const dispatch = useDispatch();
   return (
     <>
-      <div>
+      <Link
+        to={`/video/${videoInfo.id.videoId}`}
+        onClick={() => dispatch(closeSidebar())}
+        className="video-card"
+      >
         <div>
           <img
             className="thumbnail"
-            src="https://i.ytimg.com/vi/yxXzMqyHFJc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAxCHu-9hyuoB9QY6_b1pkraAyvSg"
-            alt=""
+            src={thumbnails.high.url}
+            alt={channelTitle}
           />
         </div>
         <div className="card-content-wrapper">
@@ -20,18 +33,15 @@ function VideoCard() {
             />
           </div>
           <div className="card-info">
-            <div className="card-heading">
-              Build and Deploy a Fully Responsive Website with Modern UI/UX in
-              React, Tailwinddsfsdfsdfsdf sdfsdfsd
-            </div>
-            <h3>JavaScript Mastery</h3>
+            <div className="card-heading">{title}</div>
+            <h3>{channelTitle}</h3>
             <div className="card-metadata">
               <p>850K views</p>
               <BsDot />9 Months ago
             </div>
           </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 }
