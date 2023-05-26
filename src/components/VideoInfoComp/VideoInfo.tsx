@@ -7,6 +7,7 @@ import { CreateApiEndpoint } from "../Fetch/CreatAPIEndpoint";
 import { useQuery } from "react-query";
 import SimilarVideos from "../SimilarVideos/SimilarVideos";
 import Loader from "../Loader/Loader";
+import Avatar from "react-avatar";
 
 function VideoInfo() {
   const a = useParams();
@@ -49,9 +50,10 @@ function VideoInfo() {
             <div className="channel-info-row">
               <div className="subscribe-wrapper">
                 <div className="channel-icon-wrapper">
-                  <img
-                    src="https://yt3.ggpht.com/wg1TITEoPfxvBGfzuqWyt3bqm_qu35ZhMswUv3feetU3xNX_6wsAXZF40OlPIgY4TmqbqCmAZ1U=s88-c-k-c0x00ffffff-no-rj"
-                    alt=""
+                  <Avatar
+                    name={snippet.channelTitle}
+                    round={true}
+                    size="40px"
                   />
                 </div>
                 <div className="channel-info">

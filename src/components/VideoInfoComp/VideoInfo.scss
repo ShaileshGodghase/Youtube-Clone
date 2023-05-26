@@ -51,7 +51,7 @@
   height: 40px;
 }
 .channel-info {
-  margin-right: 15px;
+  margin: 0 15px 0 15px;
 }
 .channel-info h2 {
   font-size: 18px;
@@ -193,6 +193,6 @@
 
 @media (max-width: 300px) {
   .video-info-section {
-    padding: 150px;
+    padding: 4px;
   }
 }

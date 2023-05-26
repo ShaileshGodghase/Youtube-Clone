@@ -29,10 +29,6 @@ function VideoCard({ videoInfo }: VideoCardType) {
         <div className="card-content-wrapper">
           <div className="channel-icon">
             <Avatar name={channelTitle} round={true} size="40px" />
-            {/* <img
-              src="https://yt3.ggpht.com/wg1TITEoPfxvBGfzuqWyt3bqm_qu35ZhMswUv3feetU3xNX_6wsAXZF40OlPIgY4TmqbqCmAZ1U=s68-c-k-c0x00ffffff-no-rj"
-              alt=""
-            /> */}
           </div>
           <div className="card-info">
             <div className="card-heading">{title}</div>
