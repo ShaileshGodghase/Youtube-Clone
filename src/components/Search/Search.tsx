@@ -10,7 +10,8 @@ function Search() {
   const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInput(event.target.value);
   };
-  const handleClick = () => {
+  const handleClick = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     if (searchInput !== "") navigate("/category/" + searchInput);
     setSearchInput("");
   };
@@ -24,7 +25,7 @@ function Search() {
           type="text"
           onChange={inputChange}
         />
-        <button className="search-btn" onClick={handleClick}>
+        <button className="search-btn" type="submit">
           <BsSearch />
         </button>
       </form>
