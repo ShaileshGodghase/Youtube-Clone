@@ -5,6 +5,7 @@ import { CreateApiEndpoint } from "../Fetch/CreatAPIEndpoint";
 import type { VideoType } from "../VideoComp/CommonTypes";
 import "../Home/Home.scss";
 import { useParams } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 function Category() {
   const { categoryId } = useParams();
@@ -19,7 +20,7 @@ function Category() {
   let queryName: string = categoryId!;
   const { isLoading, data, isError } = useQuery(queryName, fetchVideos);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loader />;
 
   if (isError) return <div>Something Went Wrong</div>;
 

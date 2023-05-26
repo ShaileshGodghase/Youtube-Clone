@@ -4,6 +4,7 @@ import { useQuery } from "react-query";
 import { CreateApiEndpoint } from "../Fetch/CreatAPIEndpoint";
 import type { VideoType } from "../VideoComp/CommonTypes";
 import "./Home.scss";
+import Loader from "../Loader/Loader";
 
 const fetchVideos = CreateApiEndpoint("search", {
   q: "Javascript",
@@ -16,7 +17,7 @@ const fetchVideos = CreateApiEndpoint("search", {
 function Home() {
   const { isLoading, data, isError } = useQuery("home", fetchVideos);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loader />;
 
   if (isError) return <div>Something Went Wrong</div>;
 
