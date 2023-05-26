@@ -1,6 +1,5 @@
 import { useDispatch } from "react-redux";
 import { toggleSidebar } from "../../../store/slices/uiSlice";
-import { BsSearch } from "react-icons/bs";
 import { BiUserCircle } from "react-icons/bi";
 import { CiMenuFries } from "react-icons/ci";
 import Logo from "../Logo/Logo";
