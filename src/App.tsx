@@ -1,12 +1,12 @@
+import { QueryClient, QueryClientProvider } from "react-query";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Suspense } from "react";
 import { Provider } from "react-redux";
 import { store } from "../store/store";
 import "./globals.scss";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
-import { Suspense } from "react";
 import Loader from "./components/Loader/Loader";
 import HomeLayout from "./components/Layout/HomeLayout";
-import { QueryClient, QueryClientProvider } from "react-query";
 import VideoInfo from "./components/VideoInfoComp/VideoInfo";
 import Category from "./components/CategoryPage/Category";
 

@@ -1,11 +1,14 @@
 import axios from "axios";
 
 interface ParamsType {
+  id?: string;
   q?: string;
   maxResults?: number;
   part?: string;
   regionCode?: string;
   order?: string;
+  relatedToVideoId?: string;
+  type?: string;
 }
 
 export const BASE_URL = "https://youtube-v31.p.rapidapi.com";

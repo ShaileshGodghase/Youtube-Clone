@@ -6,7 +6,7 @@ import type { VideoType } from "../VideoComp/CommonTypes";
 import "./Home.scss";
 
 const fetchVideos = CreateApiEndpoint("search", {
-  q: "new",
+  q: "Javascript",
   part: "snippet,id",
   regionCode: "IN",
   maxResults: 50,
@@ -19,13 +19,16 @@ function Home() {
   if (isLoading) return <div>Loading...</div>;
 
   if (isError) return <div>Something Went Wrong</div>;
-  // console.log(data);
 
   return (
     <div className="home-wrapper">
       <VideoGrid>
         {data?.data?.items.map((video: VideoType) => {
-          return <VideoCard key={video.id.videoId} videoInfo={video} />;
+          return (
+            video.id.videoId && (
+              <VideoCard key={video.id.videoId} videoInfo={video} />
+            )
+          );
         })}
       </VideoGrid>
     </div>
