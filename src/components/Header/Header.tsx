@@ -5,6 +5,7 @@ import { BiUserCircle } from "react-icons/bi";
 import { CiMenuFries } from "react-icons/ci";
 import Logo from "../Logo/Logo";
 import "./Header.scss";
+import Search from "../Search/Search";
 
 function Header() {
   const dispatch = useDispatch();
@@ -16,10 +17,7 @@ function Header() {
       </div>
       <div className="search-wrapper">
         <div className="search-container">
-          <input className="search" placeholder="Search" type="text" />
-          <button className="search-btn">
-            <BsSearch />
-          </button>
+          <Search />
         </div>
         <div className="cta-section">
           <a className="cta-btn" onClick={() => dispatch(toggleSidebar())}>
