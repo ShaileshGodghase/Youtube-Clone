@@ -4,6 +4,7 @@ import { VideoType } from "../CommonTypes";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { closeSidebar } from "../../../../store/slices/uiSlice";
+import Avatar from "react-avatar";
 
 interface VideoCardType {
   videoInfo: VideoType;
@@ -27,10 +28,11 @@ function VideoCard({ videoInfo }: VideoCardType) {
         </div>
         <div className="card-content-wrapper">
           <div className="channel-icon">
-            <img
+            <Avatar name={channelTitle} round={true} size="40px" />
+            {/* <img
               src="https://yt3.ggpht.com/wg1TITEoPfxvBGfzuqWyt3bqm_qu35ZhMswUv3feetU3xNX_6wsAXZF40OlPIgY4TmqbqCmAZ1U=s68-c-k-c0x00ffffff-no-rj"
               alt=""
-            />
+            /> */}
           </div>
           <div className="card-info">
             <div className="card-heading">{title}</div>
