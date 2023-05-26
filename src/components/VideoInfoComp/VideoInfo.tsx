@@ -22,6 +22,7 @@ function VideoInfo() {
   let snippet = {
       title: "",
       channelTitle: "",
+      description: "",
     },
     statistics = {
       viewCount: "0",
@@ -85,13 +86,7 @@ function VideoInfo() {
               </div>
             </div>
             <div className="description-wrapper">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. At non
-                exercitationem, quod magnam ea nemo adipisci temporibus magni
-                illum provident. Eveniet, repellendus itaque? Placeat quae
-                similique ullam vero deleniti ducimus. Labore dignissimos sed
-                tenetur. Sed dolore animi voluptatum quo sunt.
-              </p>
+              <p>{snippet.description}</p>
             </div>
           </div>
         </div>
